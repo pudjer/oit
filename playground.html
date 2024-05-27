@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap песочница</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div style="border: dashed yellow; height: 500px; width: 500px;" class="playground-element mt-4">
+      <div id="elementToStyle" class="p-3 border">Изменяемый элемент</div>
+    </div>
+    <div style="display: flex; justify-content: space-around; margin: 15px;">
+      <button class="btn btn-secondary" id="applyClasses">Применить классы</button>
+      <button class="btn btn-secondary" onclick="clearClasses()">Очистить классы</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('applyClasses').addEventListener('click', function() {
+      var classInput = prompt('Введите классы Bootstrap, например: "btn btn-primary"');
+      if (classInput !== null) {
+        var elementToStyle = document.getElementById('elementToStyle');
+        elementToStyle.className += " "+classInput;
+      }
+    });
+    function clearClasses(){
+       var elementToStyle = document.getElementById('elementToStyle');
+        elementToStyle.className = '';
+    }
+  </script>
+</body>
+

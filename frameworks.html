@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Сравнение Frontend Фреймворков</title>
+  <link href="index.css" rel="stylesheet">
+
+  <style>
+    table, th, td {
+      border: 3px solid white;
+      border-collapse: collapse;
+    }
+    table {
+      margin: 40px
+    }
+    th, td {
+      padding: 15px;
+    }
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+    caption{
+      font-size: 40px;
+      padding: 30px
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="mainlink"><h1>Современный WEB</h1></a>
+      <nav>
+        <ul class="nav">
+          <li><a href="frameworks.html">Фреймворки</a></li>
+          <li><a href="classes.html">Bootstrap песочница</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <table>
+    <caption>Сравнительная таблица некоторых <a href="#frontFw">Frontend - фреймворков</a></caption>
+    <tr>
+      <th>Логотип</th>
+      <th>Название</th>
+      <th>Плюсы</th>
+      <th>Минусы</th>
+      <th>Когда использовать</th>
+      <th>Отступление от <a href="#spa">SPA</a></th>
+    </tr>
+    <tr>
+      <td><img class="logo" src="assets/react.png"/></td>
+      <td><a href="https://react.dev/">React</a></td>
+      <td>Гибкий, большое сообщество, поддержка Facebook</td>
+      <td>Только представление, требует использования дополнительных библиотек</td>
+      <td>Когда вам нужна гибкость и/или вы разрабатываете большое приложение</td>
+      <td>
+        <table>
+          <tr><td><a href="#ssr">SSR</a></td><td>Next.js</td></tr>
+          <tr><td><a href="#native">Native</a></td><td>React Native</td></tr>
+          <tr><td><a href="#wc">Web Components</a></td><td>react-web-component</td></tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="logo" src="assets/angular.png"/></td>
+      <td><a href="https://angular.dev/">Angular</a></td>
+      <td>Полный набор инструментов, поддержка двустороннего связывания данных</td>
+      <td>Сложная кривая обучения, "тяжелый"</td>
+      <td>Когда вам нужен полный набор инструментов "из коробки"</td>
+      <td>
+          <table>
+              <tr><td><a href="#ssr">SSR</a></td><td>@angular/ssr</td></tr>
+              <tr><td><a href="#native">Native</a></td><td>NativeScript</td></tr>
+              <tr><td><a href="#wc">Web Components</a></td><td>@angular/elements</td></tr>
+          </table>
+      </td>
+    </tr>
+    <tr>
+      <td><img class="logo" src="assets/vue.png"/></td>
+      <td><a href="https://vuejs.org/">Vue</a></td>
+      <td>Легкий, простой в изучении, гибкий</td>
+      <td>Меньше ресурсов и поддержки, чем у React и Angular</td>
+      <td>Когда вам нужен простой и быстрый фреймворк для небольших проектов</td>
+      <td>
+          <table>
+              <tr><td><a href="#ssr">SSR</a></td><td>Nuxt.js</td></tr>
+              <tr><td><a href="#native">Native</a></td><td>NativeScript-Vue</td></tr>
+              <tr><td><a href="#wc">Web Components</a></td><td>vue-custom-element</td></tr>
+          </table>
+      </td>
+    </tr>
+  </table>
+  <dl>
+    <li><dt id="frontFw">Frontend Framework</dt><dd> Это инструменты, которые облегчают работу с клиентской частью веб-разработки, отвечающей за создание пользовательского интерфейса: его внешнего вида и функциональности. Они предоставляют структуру и шаблоны для организации кода, помогают управлять и взаимодействовать с DOM, обрабатывать события и разрабатывать сложные пользовательские интерфейсы.</dd></li>
+    <li><dt id="spa">SPA (Single Page Application)</dt><dd> Это веб-приложение, которое взаимодействует с пользователем путем динамического переписывания текущей страницы, без перезагрузки страницы. SPA обычно используются в современных фронтенд фреймворках для создания более быстрых и плавных веб-приложений.</dd></li>
+    <li><dt id="ssr">SSR (Server Side Rendering)</dt><dd> Это метод генерации веб-страниц на стороне сервера перед их отправкой на клиент. SSR может улучшить производительность веб-приложений, ускорить время загрузки страниц и улучшить SEO.</dd></li>
+    <li><dt id="native">Native (в контексте веб-разработки)</dt><dd> Относится к мобильной разработке, где приложения написаны на языках программирования, специфичных для конкретной платформы (например, Swift для iOS или Java для Android). В контексте веб-разработки, “Native” часто используется в контексте фреймворков, таких как React Native, которые позволяют разработчикам писать код на JavaScript, который затем компилируется в нативный код платформы.</dd></li>
+    <li><dt id="wc">Web Components</dt><dd> Это набор технологий, позволяющих создавать повторно используемые настраиваемые элементы с их функциональностью, инкапсулированной отдельно от остальной части вашего кода. Веб-компоненты включают в себя технологии, такие как пользовательские элементы, Shadow DOM и HTML шаблоны.</dd></li>
+  </dl>
+</body>
+</html>
