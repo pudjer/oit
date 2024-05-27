@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap песочница</title>
-
   <link href="index.css" rel="stylesheet">
   <style>
     body{
       display: flex;
       flex-direction: column;
       
+    }
+    #class-list{
+      cursor: copy;
     }
   </style>
 </head>
@@ -34,7 +36,7 @@
     <iframe title="playground" width="600" height="600" src="playground.html"></iframe>
   </div>
   <div>
-    <h1 style="margin-top: 100px;">Можете попробовать следущие классы или <a href="https://getbootstrap.ru/docs/5.3/components/accordion/">прочитать оффициальную документацию</a></h1>
+    <h1 style="margin-top: 100px;">Можете попробовать следущие классы(нажмите чтобы скопировать) или <a href="https://getbootstrap.ru/docs/5.3/components/accordion/">прочитать оффициальную документацию</a></h1>
     <ul id="class-list">
       <li>text-primary - Текст основного цвета (синий).</li>
       <li>text-secondary - Текст вторичного цвета (серый).</li>
@@ -83,4 +85,5 @@
     </ul>
   </div>
 </body>
+<script src="classes.js"></script>
 </html>

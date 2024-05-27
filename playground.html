@@ -18,7 +18,10 @@
     </div>
     <div style="display: flex; justify-content: space-around; margin: 15px;">
       <button class="btn btn-secondary" id="applyClasses">Применить классы</button>
-      <button class="btn btn-secondary" onclick="clearClasses()">Очистить классы</button>
+      <button class="btn btn-secondary" onclick="(function(){
+        var elementToStyle = document.getElementById('elementToStyle');
+        elementToStyle.className = '';
+     })()">Очистить классы</button>
     </div>
   </div>
   <script>
@@ -29,10 +32,7 @@
         elementToStyle.className += " "+classInput;
       }
     });
-    function clearClasses(){
-       var elementToStyle = document.getElementById('elementToStyle');
-        elementToStyle.className = '';
-    }
+    
   </script>
 </body>
 
